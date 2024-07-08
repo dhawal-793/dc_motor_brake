@@ -1,8 +1,35 @@
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import BackToTopButton from "./components/BackToTopButton";
+
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const location = useLocation();
 
-export default App
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
+
+  return (
+    <div className="w-full relative">
+      <Navbar />
+      <div className="w-full min-h-screen h-auto">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/about" element={<About />} />
+        </Routes>
+      </div>
+      <Footer />
+      <BackToTopButton />
+    </div>
+  );
+};
+
+export default App;
