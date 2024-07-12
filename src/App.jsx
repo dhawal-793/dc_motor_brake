@@ -8,6 +8,9 @@ import BackToTopButton from "./components/BackToTopButton";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Products from "./pages/Products";
+import ProductPage from "./pages/ProductPage";
+import Applications from "./pages/Applications";
 
 const App = () => {
   const location = useLocation();
@@ -22,6 +25,9 @@ const App = () => {
       <div className="w-full min-h-screen h-auto">
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/products/:productId" element={<ProductPage />} />
+          <Route exact path="/applications" element={<Applications />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/about" element={<About />} />
         </Routes>
