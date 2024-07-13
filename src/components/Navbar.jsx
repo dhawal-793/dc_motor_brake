@@ -1,5 +1,5 @@
-import { useState,useEffect } from "react";
-import { Link,useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import Container from "./ui/Container";
 
@@ -19,9 +19,12 @@ const Navbar = () => {
     <header className="relative w-full">
       <nav className=" w-full fixed top-0 inset-x-0 py-2 backdrop-blur-sm bg-white/30">
         <Container>
-          <div className="flex items-center gap-10 justify-between lg:justify-normal">
-            <Link to="/" className="font-bold text-4xl block">
-              Logo
+          <div className="flex items-center gap-20 justify-between lg:justify-normal">
+            <Link
+              to="/"
+              className="font-bold text-3xl block italic text-[#5B1892]"
+            >
+              Unique MotorBrakes
             </Link>
             <ul className="hidden lg:flex items-center justify-center gap-6 list-none text-lg font-semibold">
               {navLinks.map(({ name, link }) => (
@@ -37,7 +40,7 @@ const Navbar = () => {
             </ul>
             <button className="lg:hidden z-[100]" onClick={toggleMenu}>
               <span
-                className={`fa-solid ${
+                className={`fa-solid text-[#5B1892] ${
                   !isNavOpen ? "fa-bars -rotate-180" : "fa-xmark rotate-180"
                 } transition-all text-3xl `}
               />
@@ -53,9 +56,9 @@ const Navbar = () => {
         <div className="py-3">
           <Link
             to="/"
-            className="block text-4xl text-white font-bold text-center"
+            className="block text-3xl text-white font-bold text-center italic"
           >
-            LOGO
+            Unique MotorBrakes
           </Link>
         </div>
         <ul className=" space-y-6 list-none text-lg font-semibold p-8">
@@ -71,7 +74,7 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
-      <div className="h-16"/>
+      <div className="h-16" />
     </header>
   );
 };
