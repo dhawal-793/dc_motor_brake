@@ -1,8 +1,13 @@
+import Carousel from "../components/home-components/Carousel";
+import OurClients from "../components/home-components/OurClients";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="w-full">
+      <Carousel />
+      <OurClients />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
