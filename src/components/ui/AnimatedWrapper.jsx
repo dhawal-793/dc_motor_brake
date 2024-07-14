@@ -9,7 +9,6 @@ const AnimatedWrapper = ({ children, delay = 0.5, animateFrom = "bottom" }) => {
   useEffect(() => {
     if (isInView) {
       myControls.start("visible");
-      // console.log("in view");
     }
   }, [isInView]);
   return (
@@ -26,7 +25,7 @@ const AnimatedWrapper = ({ children, delay = 0.5, animateFrom = "bottom" }) => {
         initial="hidden"
         animate={myControls}
         transition={{
-          duration: 0.4,
+          duration: 0.6,
           delay: delay,
           ease: "easeIn",
         }}
