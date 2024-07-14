@@ -16,7 +16,7 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <header className="relative w-full">
+    <header className="relative w-full z-40">
       <nav className=" w-full fixed top-0 inset-x-0 py-2 backdrop-blur-sm bg-white/30">
         <Container>
           <div className="flex items-center gap-20 justify-between lg:justify-normal">
@@ -31,7 +31,7 @@ const Navbar = () => {
                 <li key={name}>
                   <Link
                     to={link}
-                    className="hover:text-red-300 duration-300 transition-all"
+                    className="hover:text-[#5B1892] duration-300 transition-all"
                   >
                     {name}
                   </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
       <nav
         className={`lg:hidden ${
           isNavOpen ? "translate-x-0 " : "-translate-x-full"
-        } transition-all duration-500  min-h-screen w-[75vw] max-w-[420px] bg-[#5B1892] fixed left-0 top-0 z-50`}
+        } transition-all duration-500  min-h-screen w-[75vw] max-w-[420px] bg-[#5B1892] text-white/85 fixed left-0 top-0 z-50`}
       >
         <div className="py-3">
           <Link
@@ -66,7 +66,7 @@ const Navbar = () => {
             <li key={name}>
               <Link
                 to={link}
-                className="hover:text-red-300 duration-300 transition-all"
+                className="hover:text-white border-b-4 border-b-transparent hover:border-b-white duration-300 transition-all py-1 border-opacity-30 hover:border-opacity-100"
               >
                 {name}
               </Link>
