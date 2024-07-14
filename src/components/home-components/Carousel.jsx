@@ -45,7 +45,7 @@ const Carousel = () => {
               alt={`Slide ${index + 1}`}
               className="w-full object-cover object-center"
             /> */}
-            <div className="w-full p-5 h-20 bg-green-300"></div>
+            <div className="w-full p-5 aspect-video max-h-[85vh] bg-green-300"></div>
           </SwiperSlide>
         ))}
       </Swiper>
